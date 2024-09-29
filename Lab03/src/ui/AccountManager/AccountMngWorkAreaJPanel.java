@@ -68,9 +68,9 @@ public class AccountMngWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnCreateAccount)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnManageAccount)
-                .addContainerGap(526, Short.MAX_VALUE))
+                .addContainerGap(532, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

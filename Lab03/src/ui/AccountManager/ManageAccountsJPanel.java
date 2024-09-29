@@ -27,6 +27,7 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
         
         userProcessContainer = container;
         accountDirectory = directory;
+        populateTable();
     }
 
     /**
@@ -47,6 +48,9 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
         btnDelete = new javax.swing.JButton();
         txtSearchBox = new javax.swing.JTextField();
 
+        lblHead.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblHead.setForeground(new java.awt.Color(255, 0, 51));
+        lblHead.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHead.setText("Manage Account");
 
         btnBack.setText("<< Back");
@@ -96,8 +100,8 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnBack)
-                        .addGap(258, 258, 258)
-                        .addComponent(lblHead, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(187, 187, 187)
+                        .addComponent(lblHead, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,7 +134,7 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
                 .addComponent(btnViewDetails)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnDelete)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -206,12 +210,13 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtSearchBox;
     // End of variables declaration//GEN-END:variables
 
-    void populateTable() {
+    public void populateTable() {
         
         DefaultTableModel model = (DefaultTableModel) tblAccounts.getModel();
         model.setRowCount(0);
         
         for (Account a: accountDirectory.getAccounts()) {
+            
             Object[] row = new Object[4];
             row[0] = a;
             row[1] = a.getRoutingNumber();

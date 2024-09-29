@@ -39,6 +39,7 @@ public class MainJFrame extends javax.swing.JFrame {
         splitPane = new javax.swing.JSplitPane();
         topJPanel = new javax.swing.JPanel();
         btnAccountMng = new javax.swing.JButton();
+        lblHeaderName = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,21 +53,32 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblHeaderName.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        lblHeaderName.setForeground(new java.awt.Color(204, 0, 51));
+        lblHeaderName.setText("NU Banking ");
+
         javax.swing.GroupLayout topJPanelLayout = new javax.swing.GroupLayout(topJPanel);
         topJPanel.setLayout(topJPanelLayout);
         topJPanelLayout.setHorizontalGroup(
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(topJPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnAccountMng)
-                .addContainerGap(613, Short.MAX_VALUE))
+                .addGroup(topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(topJPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnAccountMng))
+                    .addGroup(topJPanelLayout.createSequentialGroup()
+                        .addGap(281, 281, 281)
+                        .addComponent(lblHeaderName)))
+                .addContainerGap(462, Short.MAX_VALUE))
         );
         topJPanelLayout.setVerticalGroup(
             topJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(topJPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, topJPanelLayout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addComponent(lblHeaderName)
+                .addGap(18, 18, 18)
                 .addComponent(btnAccountMng)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
 
         splitPane.setTopComponent(topJPanel);
@@ -140,6 +152,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccountMng;
+    private javax.swing.JLabel lblHeaderName;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel topJPanel;
     private javax.swing.JPanel userProcessContainer;
@@ -153,10 +166,10 @@ public class MainJFrame extends javax.swing.JFrame {
         newAccount.setBalance(1000);
         
         Account anotherNewAccount = accountDirectory.addAccount();
-        newAccount.setAccountNumber("98765676576");
-        newAccount.setRoutingNumber("99999999999");
-        newAccount.setBankName("CHASE");
-        newAccount.setBalance(5000);
+        anotherNewAccount.setAccountNumber("98765676576");
+        anotherNewAccount.setRoutingNumber("99999999999");
+        anotherNewAccount.setBankName("CHASE");
+        anotherNewAccount.setBalance(5000);
 
     }
 }

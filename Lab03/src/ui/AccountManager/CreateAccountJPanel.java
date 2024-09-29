@@ -58,6 +58,9 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHeading.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblHeading.setForeground(new java.awt.Color(255, 0, 51));
+        lblHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeading.setText("Create Account");
 
         lblRoutingNumber.setText("Routing Number");
@@ -132,7 +135,7 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
                     .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnCreate)
-                .addContainerGap(314, Short.MAX_VALUE))
+                .addContainerGap(312, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -152,7 +155,7 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
         try{
             balance = Integer.parseInt(txtBalance.getText());
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Please check the balance input", "Warning !!", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please check the balance input", "Warning !!", JOptionPane.WARNING_MESSAGE);
             return;
         }
         

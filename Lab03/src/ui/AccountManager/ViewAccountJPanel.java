@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
@@ -49,14 +49,12 @@ public class ViewAccountJPanel extends javax.swing.JPanel {
 
         txtRoutingNumber = new javax.swing.JTextField();
         txtBankName = new javax.swing.JTextField();
-        txtBalance = new javax.swing.JTextField();
         btnBack = new javax.swing.JButton();
         lblHeading = new javax.swing.JLabel();
         lblRoutingNumber = new javax.swing.JLabel();
         lblAccountNumber = new javax.swing.JLabel();
         lblBankName = new javax.swing.JLabel();
         txtAccountNumber = new javax.swing.JTextField();
-        lblBalance = new javax.swing.JLabel();
         btnSave = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
 
@@ -67,6 +65,9 @@ public class ViewAccountJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblHeading.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblHeading.setForeground(new java.awt.Color(255, 0, 51));
+        lblHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeading.setText("View Account");
 
         lblRoutingNumber.setText("Routing Number");
@@ -74,8 +75,6 @@ public class ViewAccountJPanel extends javax.swing.JPanel {
         lblAccountNumber.setText("Account Number");
 
         lblBankName.setText("Bank Name");
-
-        lblBalance.setText("Balance");
 
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -102,18 +101,16 @@ public class ViewAccountJPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnBack)
-                                .addGap(135, 135, 135)
+                                .addGap(57, 57, 57)
                                 .addComponent(lblHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(166, 166, 166)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblRoutingNumber)
                                     .addComponent(lblBankName)
-                                    .addComponent(lblBalance)
                                     .addComponent(lblAccountNumber))
                                 .addGap(61, 61, 61)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -122,10 +119,10 @@ public class ViewAccountJPanel extends javax.swing.JPanel {
                         .addComponent(btnSave)
                         .addGap(18, 18, 18)
                         .addComponent(btnUpdate)))
-                .addContainerGap(292, Short.MAX_VALUE))
+                .addContainerGap(370, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAccountNumber, txtBalance, txtBankName, txtRoutingNumber});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAccountNumber, txtBankName, txtRoutingNumber});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,15 +143,11 @@ public class ViewAccountJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblBankName)
                     .addComponent(txtBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblBalance)
-                    .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnUpdate))
-                .addContainerGap(309, Short.MAX_VALUE))
+                .addContainerGap(307, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -202,12 +195,10 @@ public class ViewAccountJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel lblAccountNumber;
-    private javax.swing.JLabel lblBalance;
     private javax.swing.JLabel lblBankName;
     private javax.swing.JLabel lblHeading;
     private javax.swing.JLabel lblRoutingNumber;
     private javax.swing.JTextField txtAccountNumber;
-    private javax.swing.JTextField txtBalance;
     private javax.swing.JTextField txtBankName;
     private javax.swing.JTextField txtRoutingNumber;
     // End of variables declaration//GEN-END:variables
