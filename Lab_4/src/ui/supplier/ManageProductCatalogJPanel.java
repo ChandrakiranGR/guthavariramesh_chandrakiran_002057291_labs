@@ -28,6 +28,11 @@ public class ManageProductCatalogJPanel extends javax.swing.JPanel {
         initComponents();
         this.workArea = workArea;
         this.supplier = supplier;
+        if (supplier.getLogoImage() != null) {
+            imgLogo.setIcon(supplier.getLogoImage());
+        } else {
+            imgLogo.setText("No Logo");
+        }
        
         refreshTable();
     }
@@ -158,15 +163,15 @@ public class ManageProductCatalogJPanel extends javax.swing.JPanel {
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
         int row = tblProducts.getSelectedRow();
-        if(row<0){
-            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
+        if (row < 0) {
+            JOptionPane.showMessageDialog(null, "please slect a row from the table first", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        Product selectedProduct = (Product) tblProducts.getValueAt(row,0);
+        Product selectedProduct = (Product) tblProducts.getValueAt(row, 0);
         ViewProductDetailJPanel vpdjp = new ViewProductDetailJPanel(workArea, selectedProduct);
-        workArea.add("ViewProductDetailJPanelSupplier", vpdjp);
+        workArea.add("ViewProductDetailJPanel", vpdjp);
         CardLayout layout = (CardLayout) workArea.getLayout();
-        layout.next(workArea);
+        layout.show(workArea, "ViewProductDetailJPanel");
     }//GEN-LAST:event_btnViewActionPerformed
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed

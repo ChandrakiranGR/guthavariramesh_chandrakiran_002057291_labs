@@ -8,6 +8,7 @@ package ui.supplier;
 import model.Product;
 import model.Supplier;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -103,7 +104,30 @@ public class SearchForProductJPanel extends javax.swing.JPanel {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
         // TODO add your handling code here:
-        
+        String productIdText = idField.getText();
+
+        // Check if the input is a valid integer
+        if (productIdText.matches("\\d+")) {
+            // Parse the input to an integer
+            int productId = Integer.parseInt(productIdText);
+
+            // Search for the product in the product catalog
+            Product product = supplier.getProductCatalog().searchProduct(productId);
+
+            if (product != null) {
+                // If the product is found, navigate to the view details page
+                ViewProductDetailJPanel viewProductDetailPanel = new ViewProductDetailJPanel(workArea, product);
+                workArea.add(viewProductDetailPanel, "ViewProductDetailPanel");
+                CardLayout layout = (CardLayout) workArea.getLayout();
+                layout.show(workArea, "ViewProductDetailPanel");
+            } else {
+                // If the product is not found, display a message indicating that the product ID does not exist
+                JOptionPane.showMessageDialog(this, "Product ID does not exist", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // If the input is not a valid integer, display an error message
+            JOptionPane.showMessageDialog(this, "Invalid product ID", "Error", JOptionPane.ERROR_MESSAGE);
+        }
         
 }//GEN-LAST:event_searchButtonActionPerformed
 

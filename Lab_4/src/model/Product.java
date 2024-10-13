@@ -56,6 +56,26 @@ public class Product {
         addStaticFeature("Availability", "");
         addStaticFeature("Payment Mode", "");
     }
+      
+    private void addStaticFeature(String name, String value) {
+    Feature staticFeature = new Feature(this);
+    staticFeature.setName(name);
+    staticFeature.setValue(value);
+    features.add(staticFeature);
+}
+    
+    public Feature addNewFeature() {
+        Feature f = new Feature(this);
+        features.add(f);
+
+        return f;
+
+    }
+
+    public ArrayList<Feature> getFeature() {
+
+        return features;
+    }
 
     
     @Override
