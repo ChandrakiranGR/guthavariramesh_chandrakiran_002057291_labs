@@ -16,7 +16,7 @@ public class Supplier {
     private String supplyName;
     private ProductCatalog productCatalog;
     private ImageIcon logoImage;
-     private String CompanyName;
+    private String CompanyName;
     private String ContactInfo;
     private String Email;
     private String AvailibilityStatus;

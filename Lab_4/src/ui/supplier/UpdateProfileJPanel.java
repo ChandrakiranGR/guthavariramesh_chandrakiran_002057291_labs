@@ -17,7 +17,7 @@ public class UpdateProfileJPanel extends javax.swing.JPanel {
     /**
      * Creates new form UpdateProfileJPanel
      */
-    public UpdateProfileJPanel(JPanel workArea1, Supplier supplier1) {
+    public UpdateProfileJPanel(JPanel workArea, Supplier supplier) {
         initComponents();
         this.workArea = workArea;
         this.supplier = supplier;
@@ -175,7 +175,7 @@ public class UpdateProfileJPanel extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
 
-        supplier.setSupplyName(txtCompanyName.getText());
+        supplier.setCompanyName(txtCompanyName.getText());
         supplier.setContactInfo(txtContactInfo.getText());
         supplier.setEmail(txtEmail.getText());
         supplier.setAvailibilityStatus(txtAvailibilityStatus.getText());

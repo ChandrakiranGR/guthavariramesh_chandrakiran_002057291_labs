@@ -27,7 +27,7 @@ public class MainJFrame extends javax.swing.JFrame {
         setSize(800,600);
         setResizable(false);
        
-        
+        populateData(); 
         setLoginScreen();
     
     }
@@ -107,9 +107,8 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel mainWorkArea;
     // End of variables declaration//GEN-END:variables
 
-    private void poplulateDemoData(){
-        
-        Supplier bestbuy = supplierDirectory.addSupplier();
-        bestbuy.setSupplyName("Best Buy");
+    private void populateData() {
+        Supplier bestBuy = supplierDirectory.addSupplier();
+        bestBuy.setSupplyName("Best Buy");
     }
 }

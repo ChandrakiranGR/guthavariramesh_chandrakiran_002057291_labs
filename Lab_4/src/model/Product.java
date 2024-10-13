@@ -6,6 +6,7 @@
 package model;
 
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Product {
     private String name;
     private int price;
     private int id;
+    private ImageIcon logoImage;
     private ArrayList<Feature> features;
 
     private static int count = 0;
@@ -48,13 +50,18 @@ public class Product {
     public void setPrice(int price) {
         this.price = price;
     }
+    public ImageIcon getLogoImage() {
+        return logoImage;
+    }
+
+    public void setLogoImage(ImageIcon logoImage) {
+        this.logoImage = logoImage;
+    }
     
       private void addStaticFeatures() {
-        addStaticFeature("Color", "");
-        addStaticFeature("Price", "");
-        addStaticFeature("Ratings", "");
+        addStaticFeature("Size", "");
+        addStaticFeature("Reviews", "");
         addStaticFeature("Availability", "");
-        addStaticFeature("Payment Mode", "");
     }
       
     private void addStaticFeature(String name, String value) {
@@ -83,8 +90,8 @@ public class Product {
         return name;
     }
 
-    public Iterable<Feature> getFeatures() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
+//    public Iterable<Feature> getFeatures() {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
+//    
 }

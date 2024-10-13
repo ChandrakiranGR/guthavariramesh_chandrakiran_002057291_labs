@@ -31,7 +31,7 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
         
         this.supplier = supplier;
         if (supplier != null) lblWelcome.setText("Welcome to Lab 4, "+supplier.getSupplyName());
-        
+        btnSupplierProfile.setEnabled(true);
 //      masterOrderCatalog = moc;
     }
 

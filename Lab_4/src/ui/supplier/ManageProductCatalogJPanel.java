@@ -48,7 +48,9 @@ public class ManageProductCatalogJPanel extends javax.swing.JPanel {
             row[1] = p.getId();
             row[2] = p.getPrice();
             model.addRow(row);
+            
         }
+        
     }
 
     /**
