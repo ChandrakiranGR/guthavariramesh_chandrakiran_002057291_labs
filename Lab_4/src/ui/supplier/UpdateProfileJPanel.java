@@ -179,11 +179,7 @@ public class UpdateProfileJPanel extends javax.swing.JPanel {
         supplier.setContactInfo(txtContactInfo.getText());
         supplier.setEmail(txtEmail.getText());
         supplier.setAvailibilityStatus(txtAvailibilityStatus.getText());
-
-        btnSave.setEnabled(false);
-        btnUpdate.setEnabled(true);
-
-        JOptionPane.showMessageDialog(null, "Profile updated successfully");
+        
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed

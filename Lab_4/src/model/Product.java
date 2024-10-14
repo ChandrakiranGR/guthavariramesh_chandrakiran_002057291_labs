@@ -27,7 +27,6 @@ public class Product {
         id = count;
         features = new ArrayList<Feature>();
         addStaticFeatures();
-
     }
 
     public String getName() {
